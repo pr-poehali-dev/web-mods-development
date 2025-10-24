@@ -278,7 +278,6 @@ const Products = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading text-white">Telegram</h3>
-                      <p className="text-sm text-gray-400">Быстрая связь через мессенджер</p>
                     </div>
                   </a>
 
@@ -295,7 +294,6 @@ const Products = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading text-white">ВКонтакте</h3>
-                      <p className="text-sm text-gray-400">Сообщество и поддержка</p>
                     </div>
                   </a>
 
@@ -310,20 +308,6 @@ const Products = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading text-white">Discord</h3>
-                      <p className="text-sm text-gray-400">Наш Discord сервер</p>
-                    </div>
-                  </a>
-
-                  <a
-                    href="mailto:your@email.com"
-                    className="flex items-center gap-4 p-4 bg-gradient-to-r from-[#FF6B35]/20 to-[#FF6B35]/10 hover:from-[#FF6B35]/30 hover:to-[#FF6B35]/20 border border-[#FF6B35]/30 rounded-xl transition-all hover:scale-105 group"
-                  >
-                    <div className="w-12 h-12 rounded-xl bg-[#FF6B35] flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon name="Mail" size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-heading text-white">Email</h3>
-                      <p className="text-sm text-gray-400">Напишите нам письмо</p>
                     </div>
                   </a>
                 </div>
