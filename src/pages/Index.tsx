@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -194,10 +195,12 @@ const Index = () => {
                 <Icon name="Send" size={20} className="mr-2" />
                 Связаться с нами
               </Button>
-              <Button variant="outline" className="border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF]/10 px-8 py-6 text-lg rounded-xl transition-all hover:scale-105">
-                <Icon name="FileText" size={20} className="mr-2" />
-                Узнать больше
-              </Button>
+              <Link to="/products">
+                <Button variant="outline" className="border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF]/10 px-8 py-6 text-lg rounded-xl transition-all hover:scale-105">
+                  <Icon name="FileText" size={20} className="mr-2" />
+                  Узнать больше
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
