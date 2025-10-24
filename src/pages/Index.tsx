@@ -173,7 +173,7 @@ const Index = () => {
                   <Icon name="Check" size={20} className="text-[#FF6B35] mt-1" />
                   <div>
                     <p className="text-white font-semibold">Полный пакет услуг</p>
-                    <p className="text-gray-400 text-sm">Включает подключение хостинга и домена</p>
+                    <p className="text-gray-400 text-sm">Включает в себя разработку мода, подключение хостинга и домена</p>
                   </div>
                 </div>
               </div>
