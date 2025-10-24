@@ -1,12 +1,39 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 const Products = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f1624]">
+    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f1624] relative">
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+        <Link to="/" className="group">
+          <div className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            isHomePage 
+              ? 'bg-gradient-to-r from-[#9D4EDD] to-[#00D9FF] scale-125' 
+              : 'bg-white/30 hover:bg-white/50 hover:scale-110'
+          }`}>
+            <div className="absolute left-full ml-4 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-[#1a1a2e]/90 px-3 py-1 rounded-lg text-sm text-white">
+              Главная
+            </div>
+          </div>
+        </Link>
+        <Link to="/products" className="group">
+          <div className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            !isHomePage 
+              ? 'bg-gradient-to-r from-[#9D4EDD] to-[#00D9FF] scale-125' 
+              : 'bg-white/30 hover:bg-white/50 hover:scale-110'
+          }`}>
+            <div className="absolute left-full ml-4 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity bg-[#1a1a2e]/90 px-3 py-1 rounded-lg text-sm text-white">
+              Продукты
+            </div>
+          </div>
+        </Link>
+      </div>
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-16 animate-fade-in">
           <Link to="/" className="inline-flex items-center gap-2 text-[#00D9FF] hover:text-[#9D4EDD] transition-colors mb-6">
@@ -289,7 +316,7 @@ const Products = () => {
                   >
                     <div className="w-12 h-12 rounded-xl bg-[#0077FF] flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.11 14.37c-.32.39-.9.53-1.53.53-.47 0-.99-.08-1.53-.16-.73-.11-1.48-.23-2.17-.02-.96.29-1.83.92-2.67 1.52-.33.24-.68.48-1.03.7-.42.26-.85.39-1.27.39-.87 0-1.52-.62-1.77-1.68-.29-1.25-.36-2.53-.43-3.76-.04-.74-.08-1.49-.18-2.22-.04-.32.07-.65.3-.86.23-.22.55-.32.88-.28 1.63.18 3.27.27 4.89.27 1.35 0 2.69-.07 4.02-.2.36-.04.72.08.98.32.26.24.39.59.35.94-.13 1.16-.29 2.32-.53 3.45-.1.47-.21.94-.31 1.41v.01l.01-.36z"/>
+                        <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.524-2.049-1.708-1.038-1.034-1.487-1.17-1.745-1.17-.356 0-.458.102-.458.593v1.563c0 .424-.135.678-1.253.678-1.846 0-3.896-1.119-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.27-1.422 2.168-3.609 2.168-3.609.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/>
                       </svg>
                     </div>
                     <div>
