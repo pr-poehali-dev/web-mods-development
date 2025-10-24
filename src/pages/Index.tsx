@@ -76,7 +76,7 @@ const Index = () => {
                 <div className="flex-1">
                   <h3 className="text-2xl font-heading text-white mb-3">Разработка модов для серверов</h3>
                   <p className="text-gray-400 mb-4">
-                    Создание уникальных модификаций для игровых серверов GTA V, SAMP, CRMP с высокой производительностью и стабильностью
+                    Разработка серверных обеспечений для игровых серверов типа GTA V, CRMP, SAMP с высокой производительностью и стабильностью
                   </p>
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
                     <div className="flex items-center gap-2 text-[#FF6B35]">
